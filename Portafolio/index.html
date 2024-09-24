@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <title>Angel's Hub</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+    body {
+      display: flex;
+      flex-direction: column;
+      background-image: url('rscs/img/fondo.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+    .content {
+      flex: 1;
+    }
+    .blur {
+      backdrop-filter: blur(10px);
+      background-color: rgba(140, 193, 234, 0.1); /* Ajusta el color de fondo y la opacidad */
+    }
+    .blur-works {
+      backdrop-filter: blur(15px);
+      background-color: rgba(255, 255, 255, 0.1); /* Ajusta el color de fondo y la opacidad */
+    }
+    .blur-abstract{
+      backdrop-filter: blur(15px);
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand">
+        <img src="rscs/img/diploma.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-middle">
+        Angel's Hub
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page">C:/user/Home</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div>‎ </div>
+
+  <!-- Header -->
+  <header class="text-white text-center py-2 blur">
+    <div class="container">
+      <h1>Bienvenido a mi centro.</h1>
+      <p class="lead">Aquí encontrarás mis trabajos realizados a lo largo del curso.</p>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container my-5 content">
+    <div class="row">
+      <!-- Sección de selección de trabajos -->
+      <div class="col-md-6">
+        <div class="card mb-4 text-white blur-works">
+          <div class="card-body">
+            <h2 class="card-title text-center">{Works}</h2>
+            <ul class="list-group blur">
+              <li class="list-group-item blur text-white">
+                <a href="sub-page/canva.html" class="text-white text-decoration-none">
+                  <img src="rscs/img/canva.png" alt="Trabajo 1" width="200" height="125" class="me-2">
+                  Presentación: Stack Overflow</a></li>
+              <li class="list-group-item blur text-white">Web 1.0</li>
+              <li class="list-group-item blur text-white">GitHub</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Sección de descripción general -->
+      <div class="col-md-6">
+        <div class="card text-white blur-abstract">
+          <div class="card-body">
+            <h2 class="card-title text-center">{Abstract}</h2>
+            <ul class="list-group blur">
+              <li class="list-group-item blur text-white">{Nombre} <h4>‎ ‎ ‎ ‎ Angel Rugerio Jiménez</h4></li>
+              <li class="list-group-item blur text-white">{Carrera} <h4>‎ ‎ ‎ ‎Ingeniería en Sistemas Computacionales</h4></li>
+                <li class="list-group-item blur text-white">{Matrícula} <h4>‎ ‎ ‎ ‎201720</h4></li>
+              <li class="list-group-item blur text-white">{Periodo} <h4>‎ ‎ ‎ ‎Otoño 2024</h4></li>
+              <li class="list-group-item blur text-white">{Clase} <h4>‎ ‎ ‎ ‎Introducción a Ingeniería en S.C.</h4></li></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-white text-center py-4 blur">
+    <div class="container">
+      <p class="mb-0">© 2024 Angel's Hub.</p>
+    </div>
+  </footer>
+</body>
