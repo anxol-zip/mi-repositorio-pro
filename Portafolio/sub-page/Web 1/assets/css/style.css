@@ -1,0 +1,43 @@
+body {
+    background: #7a9d9f;
+}
+
+.estilo_bueno{
+    color: #ffffff;
+    text-align: center;
+    font-face:"Times New Roman";
+    font-size: xxx-large;
+}
+
+.sub{
+    color: #f8f7f7;
+    text-align: center;
+    font-face:"Times New Roman";
+    font-size: xx-large;
+}
+
+.parrafo{
+    color: #efecec;
+    text-align: center;
+    font-face:"arial";
+}
+
+.links{
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin-left: 10px;
+}
+
+li::before {
+    content: "\2022";
+    padding-right: 8px;
+    color: #ffffff;
+}
+
+.no-list-style::before {
+    content: none;
+}
