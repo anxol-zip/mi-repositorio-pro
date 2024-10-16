@@ -1,20 +1,20 @@
 #include <iostream>
-#include <string>
+#include <string> //Para usar strings
+//Estas dos librerías son para generar números aleatorios
 #include <cstdlib>
 #include <ctime>
-#include <algorithm> // Para transformar letras
 #include <locale> // Para uso de caracteres con acentos
 
 using namespace std;
 
-string easy[4] = {"taco", "sol", "gato", "flor"};
-string medium[4] = {"mercado", "cactus", "tijeras", "pelota"};
-string hard[4] = {"quetzal", "mezcal", "esfinge", "crisalida"};
-string palabra, palabra_mostrada;
-char letra;
-int intentos = 6;
-int Lpalabra, aciertos;
-bool acierto;
+string easy[4] = {"taco", "sol", "gato", "flor"}; //Vector de palabras fáciles
+string medium[4] = {"mercado", "cactus", "tijeras", "pelota"}; //Vector de palabras medias
+string hard[4] = {"quetzal", "mezcal", "esfinge", "crisalida"}; //Vector de palabras difíciles
+string palabra, palabra_mostrada; //Palabra a adivinar y palabra mostrada con guiones bajos
+char letra; //Letra ingresada por el usuario
+int intentos = 6; //Número de intentos
+int Lpalabra, aciertos; //Longitud de la palabra y número de aciertos
+bool win; //Variable para saber si se ganó o no
 
 // Función para mostrar la palabra con guiones bajos y letras correctas
 void mostrarPalabra() {
@@ -26,7 +26,7 @@ void mostrarPalabra() {
 
 // Función para dibujar el muñeco y su "agarradera"
 void mostrarMuñeco(int intentos) {
-    cout << "  _____" << endl;
+    cout << "  x---x" << endl;
     cout << "  |   |" << endl;
     switch(intentos) {
         case 5:
@@ -71,7 +71,7 @@ void mostrarMuñeco(int intentos) {
             cout << "      |" << endl;
             break;
     }
-    cout << "______|___" << endl; // Base
+    cout << "x_____|__x" << endl; // Base
     cout << endl;
 }
 
@@ -80,8 +80,8 @@ string normalizarLetra(string texto) {
     string acentos = "ÁÉÍÓÚáéíóú";
     string sinAcentos = "AEIOUaeiou";
 
-    for (size_t i = 0; i < texto.size(); i++) {
-        for (size_t j = 0; j < acentos.size(); j++) {
+    for (int i = 0; i < texto.size(); i++) { //texto.size() es el tamaño del string
+        for (int j = 0; j < acentos.size(); j++) {
             if (texto[i] == acentos[j]) {
                 texto[i] = sinAcentos[j]; // Reemplaza letras con acento por sin acento
                 break;
@@ -92,20 +92,21 @@ string normalizarLetra(string texto) {
     return texto;
 }
 
-void facil() {
+// Función base para jugar en cualquier dificultad
+void jugar(string palabras[], int tamano) {
     srand(time(0));
-    palabra = normalizarLetra(easy[rand() % 4]); // Elige palabra aleatoria y la normaliza
+    palabra = normalizarLetra(palabras[rand() % tamano]); // Elige palabra aleatoria y la normaliza
     Lpalabra = palabra.length();
     palabra_mostrada = string(Lpalabra, '_'); // Inicia con guiones bajos
     aciertos = 0;
-    acierto = false;
+    intentos = 6;
+    win = false;
 
-    cout << "¡Dificultad Fácil!" << endl;
     cout << "Adivina la palabra: " << endl;
     mostrarPalabra();
 
-    while(intentos > 0 && aciertos < Lpalabra) {
-        acierto = false;
+    while (intentos > 0 && aciertos < Lpalabra) {
+        win = false;
         cout << "Intentos Restantes: " << intentos << "." << endl;
         cout << "Ingresa una letra: ";
         cin >> letra;
@@ -115,11 +116,11 @@ void facil() {
             if (palabra[i] == letra && palabra_mostrada[i] == '_') {
                 palabra_mostrada[i] = letra;
                 aciertos++;
-                acierto = true;
+                win = true;
             }
         }
 
-        if (acierto) {
+        if (win) {
             cout << "¡Correcto!" << endl;
         } else {
             cout << "¡Incorrecto!" << endl;
@@ -135,6 +136,22 @@ void facil() {
     } else {
         cout << "Game Over. La palabra era: " << palabra << endl;
     }
+}
+
+// Funciones de dificultades
+void facil() {
+    cout << "¡Dificultad Fácil!" << endl;
+    jugar(easy, 4);
+}
+
+void medio() {
+    cout << "¡Dificultad Media!" << endl;
+    jugar(medium, 4);
+}
+
+void dificil() {
+    cout << "¡Dificultad Difícil!" << endl;
+    jugar(hard, 4);
 }
 
 int main() {
@@ -153,10 +170,10 @@ int main() {
             facil();
             break;
         case 2:
-            // Falta implementar medio();
+            medio();
             break;
         case 3:
-            // Falta implementar dificil();
+            dificil();
             break;
         case 4:
             cout << "¡Hasta luego!" << endl;
