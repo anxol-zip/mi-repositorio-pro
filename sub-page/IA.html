@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <title>Artificial Inteligence</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+    body {
+      display: flex;
+      flex-direction: column;
+      background-image: url('../rscs/img/fondo.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+    .content {
+      flex: 1;
+    }
+    .blur {
+      backdrop-filter: blur(10px);
+      background-color: rgba(140, 193, 234, 0.1); /* Ajusta el color de fondo y la opacidad */
+    }
+    .blur-abstract{
+      backdrop-filter: blur(15px);
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+    .blur-works {
+      backdrop-filter: blur(15px);
+      background-color: rgba(255, 255, 255, 0.1); /* Ajusta el color de fondo y la opacidad */
+    }
+  </style>
+</head>
+
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="../index.html">
+      <img src="../rscs/img/diploma.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-middle">
+      Angel's Hub
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page">C:/user/Home/Works/AI</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div>‎ </div>
+
+<!-- Header -->
+<header class="text-white text-center py-2 blur">
+  <div class="container">
+    <h1>AI [Artificial Inteligence]</h1>
+    <p class="lead">La Inteligencia Artificial es una herramienta increíble que se ha desarrollado en los últimos años, analicemos qué es en verdad.</p>
+  </div>
+</header>
+
+<main class="container my-5 content">
+
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card text-white blur-abstract">
+        <div class="card-body">
+          <h2 class="card-title text-center">{Concept}</h2>
+          <ul class="list-group blur">
+            <li class="list-group-item blur text-white text-center">
+              <h5>La IA (o AI en inglés) es un ámbito y materia de la informática, la cual se centra en el desarrollo de sistemas que lleven a cabo tareas que normalmente necesitan de inteligencia humana.</h5>
+            </li>
+          </ul>
+          <div class="d-flex flex-column">
+            <div class="d-flex align-items-center">
+              <img src="../rscs/img/AI.jpg" class="me-3" style="width: 100%; height: auto;" alt="modeva">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="card mb-4 text-white blur-abstract">
+        <div class="card-body">
+          <h2 class="card-title text-center">{Concepts}</h2>
+          <ul class="list-group blur">
+            <li class="list-group-item blur text-white text-center">
+              <h5>{Weak AI}</h5> Se trata de un programa diseñado específicamente para una tarea en particular.
+            </li>
+            <li class="list-group-item blur text-white text-center">
+              <h5>{Strong AI}</h5> Es un tipo al que aún no hemos llegado, entonces existe solamente en la ciencia ficción.
+            </li>
+            <li class="list-group-item blur text-white text-center">
+              <h5>{Development}</h5> Para el desarrollo de la IA, se necesita la programación de algoritmos que permitan a las máquinas aprender de los datos que se les proporcionan durante varias iteraciones o generaciones. Entre cada generación, se analizan los datos y se ajustan los algoritmos para mejorar la precisión de las predicciones.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div>‎ </div> <!-- Espacio -->
+
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card mb-4 text-white blur-abstract">
+        <div class="card-body">
+          <h2 class="card-title text-center">{PUV}</h2>
+          <ul class="list-group blur">
+            <li class="list-group-item blur text-white text-center">
+              <div>Teachable Machine Image Model</div>
+              <button type="button" onclick="init()">Start</button>
+              <div id="webcam-container"></div>
+              <div id="label-container"></div>
+              <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+              <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+              <script type="text/javascript">
+                // More API functions here:
+                // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image
+
+                // the link to your model provided by Teachable Machine export panel
+                const URL = "https://teachablemachine.withgoogle.com/models/EF2XtP0dz/";
+
+                let model, webcam, labelContainer, maxPredictions;
+
+                // Load the image model and setup the webcam
+                async function init() {
+                  const modelURL = URL + "model.json";
+                  const metadataURL = URL + "metadata.json";
+
+                  // load the model and metadata
+                  // Refer to tmImage.loadFromFiles() in the API to support files from a file picker
+                  // or files from your local hard drive
+                  // Note: the pose library adds "tmImage" object to your window (window.tmImage)
+                  model = await tmImage.load(modelURL, metadataURL);
+                  maxPredictions = model.getTotalClasses();
+
+                  // Convenience function to setup a webcam
+                  const flip = true; // whether to flip the webcam
+                  webcam = new tmImage.Webcam(200, 200, flip); // width, height, flip
+                  await webcam.setup(); // request access to the webcam
+                  await webcam.play();
+                  window.requestAnimationFrame(loop);
+
+                  // append elements to the DOM
+                  document.getElementById("webcam-container").appendChild(webcam.canvas);
+                  labelContainer = document.getElementById("label-container");
+                  for (let i = 0; i < maxPredictions; i++) { // and class labels
+                    labelContainer.appendChild(document.createElement("div"));
+                  }
+                }
+
+                async function loop() {
+                  webcam.update(); // update the webcam frame
+                  await predict();
+                  window.requestAnimationFrame(loop);
+                }
+
+                // run the webcam image through the image model
+                async function predict() {
+                  // predict can take in an image, video or canvas html element
+                  const prediction = await model.predict(webcam.canvas);
+                  for (let i = 0; i < maxPredictions; i++) {
+                    const classPrediction =
+                            prediction[i].className + ": " + prediction[i].probability.toFixed(2);
+                    labelContainer.childNodes[i].innerHTML = classPrediction;
+                  }
+                }
+              </script>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="card text-white blur-abstract">
+        <div class="card-body">
+          <h2 class="card-title text-center">{Teachable Machine}</h2>
+          <ul class="list-group blur">
+            <li class="list-group-item blur text-white text-center">
+              <h5>Es una herramienta que permite a los usuarios entrenar modelos de aprendizaje automático en el navegador. Puedes entrenar un modelo de aprendizaje automático para reconocer imágenes, sonidos y gestos sin tener que escribir código. Es proporcionada por google, siendo bastante sencilla de usar e incluir en un código, como se muestra en el ejemplo anterior.</h5>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    </div>
+
+</main>
+
+<!-- Footer -->
+<footer class="text-white text-center py-4 blur">
+  <div class="container">
+    <p class="mb-0">© 2024 Angel's Hub.</p>
+  </div>
+</footer>
+</body>
