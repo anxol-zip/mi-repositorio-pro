@@ -51,6 +51,74 @@
         height: 400px;
       }
 
+      .carousel-slide .list-group-item {
+        min-width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        color: white;
+        text-decoration: none;
+        background-color: rgba(0, 0, 0, 0.3);
+        border: none;
+      }
+
+      .carousel-container {
+        width: 100%;
+        max-width: 600px;
+        overflow: hidden;
+        margin: auto;
+        position: relative;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border-radius: 10px;
+        padding: 20px;
+      }
+
+      .carousel-slide {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+      }
+
+      .carousel-slide a {
+        min-width: 100%;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        background-color: #f8f9fa;
+        color: #333;
+        text-decoration: none;
+        font-size: 20px;
+      }
+
+      .carousel-slide img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .prev, .next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+      }
+
+      .prev {
+        left: 10px;
+      }
+
+      .next {
+        right: 10px;
+      }
+
     </style>
   </head>
 
@@ -141,18 +209,44 @@
       <div class="row">
 
         <div class="col-md-6">
-          <div class="card text-white blur-abstract">
+          <div class="card mb-4 text-white blur-abstract">
             <div class="card-body">
               <h2 class="card-title text-center">{Work Flow}</h2>
               <ul class="list-group blur">
                 <li class="list-group-item blur text-white text-center">
-                  <h4>Como parte de la tarea, muestro un video donde ejemplifico y expongo los pasos para escanear un objeto desde el mismo celular.</h4>
-                  <video style="width: 100%; height: auto;" controls>
-                    <source src="../rscs/videos/mi_video.mp4" type="video/mp4">
-                    Tu navegador no soporta la etiqueta de video.
-                  </video>
+                  <h4>Como parte de la tarea, muestro un carrusel donde ejemplifico y expongo los pasos para escanear un objeto desde el mismo celular.</h4>
                 </li>
               </ul>
+              <div class="carousel-container">
+                <div class="carousel-slide" id="carousel-slide">
+                  <div class="list-group-item">
+                    <img src="../rscs/img/scan1.png" alt="scan1" width="250" height="125">
+                  </div>
+
+                  <div class="list-group-item">
+                    <img src="../rscs/img/scan2.png" alt="scan2" width="250" height="125">
+                  </div>
+
+                  <div class="list-group-item">
+                    <img src="../rscs/img/scan3.jpg" alt="scan3" width="250" height="125">
+                  </div>
+
+                  <div class="list-group-item">
+                    <img src="../rscs/img/scan4.png" alt="scan4" width="250" height="125">
+                  </div>
+
+                  <div class="list-group-item">
+                    <img src="../rscs/img/scan6.png" alt="scan6" width="250" height="125">
+                  </div>
+
+                  <div class="list-group-item">
+                    <img src="../rscs/img/scan7.png" alt="scan7" width="250" height="125">
+                  </div>
+                </div>
+
+                <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+                <button class="next" onclick="moveSlide(1)">&#10095;</button>
+              </div>
             </div>
           </div>
         </div>
@@ -174,6 +268,17 @@
       </div>
 
     </main>
+
+    <script>
+      const slide = document.getElementById('carousel-slide'); // Obtiene el elemento del carrusel
+      let currentIndex = 0; // Inicializa el índice del carrusel
+      const totalSlides = slide.children.length; // Obtiene el número total de elementos en el carrusel
+
+      function moveSlide(direction) { // Función para mover el carrusel
+        currentIndex = (currentIndex + direction + totalSlides) % totalSlides; // Calcula el índice del carrusel
+        slide.style.transform = 'translateX(' + (-currentIndex * 100) + '%)'; // Mueve el carrusel
+      }
+    </script>
 
     <!-- Footer -->
     <footer class="text-white text-center py-4 blur">
