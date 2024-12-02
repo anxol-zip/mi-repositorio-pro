@@ -10,8 +10,6 @@
 
     <title>Hangman</title>
 
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/brython@3.9.5/brython.min.js"></script>
-
     <style>
 
       html, body {
@@ -42,16 +40,79 @@
         background-color: rgba(0, 0, 0, 0.5);
       }
 
-      .blur-works {
-        backdrop-filter: blur(15px);
-        background-color: rgba(255, 255, 255, 0.1); /* Ajusta el color de fondo y la opacidad */
+      .carousel-slide .list-group-item {
+        min-width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        color: white;
+        text-decoration: none;
+        background-color: rgba(0, 0, 0, 0.3);
+        border: none;
+      }
+
+      .carousel-container {
+        width: 100%;
+        max-width: 700px;
+        overflow: hidden;
+        margin: auto;
+        position: relative;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border-radius: 10px;
+        padding: 20px;
+      }
+
+      .carousel-slide {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+      }
+
+      .carousel-slide a {
+        min-width: 100%;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        background-color: #f8f9fa;
+        color: #333;
+        text-decoration: none;
+        font-size: 20px;
+      }
+
+      .carousel-slide img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .prev, .next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+      }
+
+      .prev {
+        left: 10px;
+      }
+
+      .next {
+        right: 10px;
       }
 
     </style>
   </head>
 
   <!-- Body -->
-  <body onload="brython()">
+  <body>
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -132,140 +193,50 @@
       <div class="row">
 
         <div class="col-md-12">
-          <div class="card text-white blur-abstract">
-            <div class="card-body">
-              <h2 class="card-title text-center">{Code}</h2>
-              <ul class="list-group blur">
-                <li class="list-group-item blur text-white text-center">
-                  <p class="mb-0">Cada error agregará una parte al dibujo del ahorcado. ¡Debes adivinar la palabra antes de completar el dibujo!</p>
-                </li>
+          <div class="carousel-container">
+            <h2 class="text-center text-white">{Snappify}</h2>
 
-              </ul>
+            <div class="carousel-slide" id="carousel-slide">
+
+              <div class="list-group-item">
+                <img src="../../rscs/img/python1.png" alt="python1" width="500" height="250">
+              </div>
+
+              <div class="list-group-item">
+                <img src="../../rscs/img/python2.png" alt="python2" width="500" height="250">
+              </div>
+
+              <div class="list-group-item">
+                <img src="../../rscs/img/python3.png" alt="python3" width="500" height="250">
+              </div>
+
+              <div class="list-group-item">
+                <img src="../../rscs/img/python4.png" alt="python4" width="500" height="250">
+              </div>
+
+              <div class="list-group-item">
+                <img src="../../rscs/img/python5.png" alt="python5" width="500" height="250">
+              </div>
             </div>
+
+            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="next" onclick="moveSlide(1)">&#10095;</button>
           </div>
         </div>
 
       </div>
-
-      <pre id="output"></pre>
-      <script type="text/python">
-        import random
-        import unicodedata
-
-        easy = ["taco", "sol", "gato", "flor"]
-        medium = ["mercado", "cactus", "tijeras", "pelota"]
-        hard = ["quetzal", "mezcal", "esfinge", "crisalida"]
-
-        def mostrar_palabra(palabra_mostrada):
-            print(" ".join(palabra_mostrada))
-
-        def mostrar_muneco(intentos):
-            print("  x---x")
-            print("  |   |")
-            if intentos <= 5:
-                print("  O   |")
-            else:
-                print("      |")
-            if intentos <= 4:
-                print("  |   |")
-            elif intentos <= 3:
-                print(" /|   |")
-            elif intentos <= 2:
-                print(" /|\\  |")
-            else:
-                print("      |")
-            if intentos <= 1:
-                print(" /    |")
-            elif intentos == 0:
-                print(" / \\  |")
-            else:
-                print("      |")
-            print("x_____|__x\n")
-
-        def normalizar_letra(texto):
-            return ''.join(
-                c.lower() for c in unicodedata.normalize('NFD', texto)
-                if unicodedata.category(c) != 'Mn'
-            )
-
-        def jugar(palabras):
-            palabra = normalizar_letra(random.choice(palabras))
-            Lpalabra = len(palabra)
-            palabra_mostrada = ["_"] * Lpalabra
-            intentos = 6
-            aciertos = 0
-
-            print("Adivina la palabra:")
-            mostrar_palabra(palabra_mostrada)
-
-            while intentos > 0 and aciertos < Lpalabra:
-                letra = input(f"Intentos restantes: {intentos}. Ingresa una letra: ").strip()
-                letra = normalizar_letra(letra)
-
-                if len(letra) != 1:
-                    print("Por favor, ingresa solo una letra.")
-                    continue
-
-                acierto = False
-                for i in range(Lpalabra):
-                    if palabra[i] == letra and palabra_mostrada[i] == "_":
-                        palabra_mostrada[i] = letra
-                        aciertos += 1
-                        acierto = True
-
-                if acierto:
-                    print("¡Correcto!")
-                else:
-                    print("¡Incorrecto!")
-                    intentos -= 1
-                    mostrar_muneco(intentos)
-
-                mostrar_palabra(palabra_mostrada)
-
-            if aciertos == Lpalabra:
-                print("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^")
-                print("¡Felicidades! :D Has adivinado la palabra.")
-                print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
-            else:
-                print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
-                print(f"Game Over D:. La palabra era: {palabra}")
-                print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
-
-        def main():
-            print("¡BIENVENID@ AL JUEGO DEL AHORCADO!")
-            print("----------------------------------------")
-            print("Selecciona la dificultad del juego:")
-            print("1. Fácil")
-            print("2. Medio")
-            print("3. Difícil")
-            print("4. Salir")
-
-            try:
-                n = int(input("Opción: "))
-            except ValueError:
-                print("Opción no válida.")
-                return
-
-            print("----------------------------------------")
-            if n == 1:
-                print("¡Dificultad Fácil!")
-                jugar(easy)
-            elif n == 2:
-                print("¡Dificultad Media!")
-                jugar(medium)
-            elif n == 3:
-                print("¡Dificultad Difícil!")
-                jugar(hard)
-            elif n == 4:
-                print("¡Hasta luego!")
-            else:
-                print("Opción no válida.")
-
-        if __name__ == "__main__":
-            main()
-      </script>
-
     </main>
+
+    <script>
+      const slide = document.getElementById('carousel-slide'); // Obtiene el elemento del carrusel
+      let currentIndex = 0; // Inicializa el índice del carrusel
+      const totalSlides = slide.children.length; // Obtiene el número total de elementos en el carrusel
+
+      function moveSlide(direction) { // Función para mover el carrusel
+        currentIndex = (currentIndex + direction + totalSlides) % totalSlides; // Calcula el índice del carrusel
+        slide.style.transform = 'translateX(' + (-currentIndex * 100) + '%)'; // Mueve el carrusel
+      }
+    </script>
 
     <!-- Footer -->
     <footer class="text-white text-center py-4 blur">

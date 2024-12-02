@@ -1,120 +1,59 @@
 import random
 import unicodedata
 
-# Palabras por dificultad
-easy = ["taco", "sol", "gato", "flor"]
-medium = ["mercado", "cactus", "tijeras", "pelota"]
-hard = ["quetzal", "mezcal", "esfinge", "crisalida"]
+class Hangman:
+    def __init__(self, difficulty):
+        self.difficulty_map = {
+            "easy": ["taco", "sol", "gato", "flor"],
+            "medium": ["mercado", "cactus", "tijeras", "pelota"],
+            "hard": ["quetzal", "mezcal", "esfinge", "crisalida"]
+        }
+        self.difficulty = difficulty
+        self.word = self._normalize(random.choice(self.difficulty_map[difficulty]))
+        self.word_length = len(self.word)
+        self.display_word = ["_"] * self.word_length
+        self.remaining_attempts = 6
+        self.correct_guesses = 0
+        self.status = "ongoing"
 
-# Función para mostrar la palabra con guiones bajos y letras correctas
-def mostrar_palabra(palabra_mostrada):
-    print(" ".join(palabra_mostrada))
+    def _normalize(self, text):
+        return ''.join(
+            c.lower() for c in unicodedata.normalize('NFD', text)
+            if unicodedata.category(c) != 'Mn'
+        )
 
-# Función para dibujar el muñeco y su "agarradera"
-def mostrar_muneco(intentos):
-    print("  x---x")
-    print("  |   |")
-    if intentos <= 5:
-        print("  O   |")
-    else:
-        print("      |")
-    if intentos <= 4:
-        print("  |   |")
-    elif intentos <= 3:
-        print(" /|   |")
-    elif intentos <= 2:
-        print(" /|\\  |")
-    else:
-        print("      |")
-    if intentos <= 1:
-        print(" /    |")
-    elif intentos == 0:
-        print(" / \\  |")
-    else:
-        print("      |")
-    print("x_____|__x\n")
+    def guess(self, letter):
+        if self.status != "ongoing":
+            return {"message": "Game already finished", "status": self.status}
 
-# Función para normalizar letras (convertir a minúsculas y eliminar acentos)
-def normalizar_letra(texto):
-    return ''.join(
-        c.lower() for c in unicodedata.normalize('NFD', texto)
-        if unicodedata.category(c) != 'Mn'
-    )
+        letter = self._normalize(letter)
+        if len(letter) != 1:
+            return {"message": "Invalid input. Please enter one letter."}
 
-# Función base para jugar en cualquier dificultad
-def jugar(palabras):
-    palabra = normalizar_letra(random.choice(palabras))
-    Lpalabra = len(palabra)
-    palabra_mostrada = ["_"] * Lpalabra
-    intentos = 6
-    aciertos = 0
+        if letter in self.display_word:
+            return {"message": "Letter already guessed."}
 
-    print("Adivina la palabra:")
-    mostrar_palabra(palabra_mostrada)
+        correct = False
+        for i, char in enumerate(self.word):
+            if char == letter and self.display_word[i] == "_":
+                self.display_word[i] = letter
+                self.correct_guesses += 1
+                correct = True
 
-    while intentos > 0 and aciertos < Lpalabra:
-        letra = input(f"Intentos restantes: {intentos}. Ingresa una letra: ").strip()
-        letra = normalizar_letra(letra)
+        if not correct:
+            self.remaining_attempts -= 1
 
-        if len(letra) != 1:
-            print("Por favor, ingresa solo una letra.")
-            continue
+        if self.correct_guesses == self.word_length:
+            self.status = "won"
+            return {"message": "Congratulations! You've guessed the word.", "status": self.status}
 
-        acierto = False
-        for i in range(Lpalabra):
-            if palabra[i] == letra and palabra_mostrada[i] == "_":
-                palabra_mostrada[i] = letra
-                aciertos += 1
-                acierto = True
+        if self.remaining_attempts == 0:
+            self.status = "lost"
+            return {"message": f"Game Over. The word was: {self.word}", "status": self.status}
 
-        if acierto:
-            print("¡Correcto!")
-        else:
-            print("¡Incorrecto!")
-            intentos -= 1
-            mostrar_muneco(intentos)
-
-        mostrar_palabra(palabra_mostrada)
-
-    if aciertos == Lpalabra:
-        print("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^")
-        print("¡Felicidades! :D Has adivinado la palabra.")
-        print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
-    else:
-        print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
-        print(f"Game Over D:. La palabra era: {palabra}")
-        print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
-
-# Función principal
-def main():
-    print("¡BIENVENID@ AL JUEGO DEL AHORCADO!")
-    print("----------------------------------------")
-    print("Selecciona la dificultad del juego:")
-    print("1. Fácil")
-    print("2. Medio")
-    print("3. Difícil")
-    print("4. Salir")
-
-    try:
-        n = int(input("Opción: "))
-    except ValueError:
-        print("Opción no válida.")
-        return
-
-    print("----------------------------------------")
-    if n == 1:
-        print("¡Dificultad Fácil!")
-        jugar(easy)
-    elif n == 2:
-        print("¡Dificultad Media!")
-        jugar(medium)
-    elif n == 3:
-        print("¡Dificultad Difícil!")
-        jugar(hard)
-    elif n == 4:
-        print("¡Hasta luego!")
-    else:
-        print("Opción no válida.")
-
-if __name__ == "__main__":
-    main()
+        return {
+            "message": "Correct!" if correct else "Incorrect!",
+            "display_word": "".join(self.display_word),
+            "remaining_attempts": self.remaining_attempts,
+            "status": self.status
+        }
