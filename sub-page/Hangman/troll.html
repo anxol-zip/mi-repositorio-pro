@@ -40,6 +40,74 @@
         background-color: rgba(0, 0, 0, 0.5);
       }
 
+      .carousel-slide .list-group-item {
+        min-width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        color: white;
+        text-decoration: none;
+        background-color: rgba(0, 0, 0, 0.3);
+        border: none;
+      }
+
+      .carousel-container {
+        width: 100%;
+        max-width: 600px;
+        overflow: hidden;
+        margin: auto;
+        position: relative;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border-radius: 10px;
+        padding: 20px;
+      }
+
+      .carousel-slide {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+      }
+
+      .carousel-slide a {
+        min-width: 100%;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        background-color: #f8f9fa;
+        color: #333;
+        text-decoration: none;
+        font-size: 20px;
+      }
+
+      .carousel-slide img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .prev, .next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+      }
+
+      .prev {
+        left: 10px;
+      }
+
+      .next {
+        right: 10px;
+      }
+
     </style>
   </head>
 
@@ -87,8 +155,8 @@
               <ul class="list-group blur">
                 <li class="list-group-item blur text-white text-center">
                   <video style="width: 100%; height: auto;" controls>
-                    <source src="../rscs/videos/mi_video.mp4" type="video/mp4">
-                    Tu navegador no soporta la etiqueta de video.
+                    <source src="../../rscs/vid/Gameplay%20Hangman.mp4" type="video/mp4">
+                    Tu navegador no soporta la etiqueta de video :(.
                   </video>
                 </li>
               </ul>
@@ -97,19 +165,52 @@
         </div>
 
         <div class="col-md-6">
-          <div class="card text-white blur-abstract">
-            <div class="card-body">
-              <h2 class="card-title text-center">{Snappify}</h2>
-              <div style="overflow:hidden;margin-left:auto;margin-right:auto;border-radius:10px;width:100%;max-width:1232px;position:relative"><div style="width:100%;padding-bottom:56.25%"></div><iframe width="1232" height="693" title="Juego del ahorcado hecho para mi clase de introducción a la ingenieria" src="https://snappify.com/embed/83247ae2-aba0-4b33-b498-bb66e300b8d5?responsive=1&p=1&autoplay=1&b=1" allow="clipboard-write" allowfullscreen="" loading="lazy" style="background:#eee;position:absolute;left:0;top:0;width:100%" frameborder="0"></iframe></div>
+          <div class="carousel-container">
+            <h2 class="text-center text-white">{Snappify}</h2>
+
+            <div class="carousel-slide" id="carousel-slide">
+
+              <div class="list-group-item">
+                <img src="../../rscs/img/snap1.png" alt="snap1" width="250" height="125">
+              </div>
+
+              <div class="list-group-item">
+                <img src="../../rscs/img/snap2.png" alt="snap2" width="250" height="125">
+              </div>
+
+              <div class="list-group-item">
+                <img src="../../rscs/img/snap3.png" alt="snap3" width="250" height="125">
+              </div>
+
+              <div class="list-group-item">
+                <img src="../../rscs/img/snap4.png" alt="snap4" width="250" height="125">
+              </div>
+
+              <div class="list-group-item">
+                <img src="../../rscs/img/snap5.png" alt="snap5" width="250" height="125">
+              </div>
             </div>
+
+            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="next" onclick="moveSlide(1)">&#10095;</button>
+
           </div>
         </div>
-
-
 
       </div>
 
     </main>
+
+    <script>
+      const slide = document.getElementById('carousel-slide'); // Obtiene el elemento del carrusel
+      let currentIndex = 0; // Inicializa el índice del carrusel
+      const totalSlides = slide.children.length; // Obtiene el número total de elementos en el carrusel
+
+      function moveSlide(direction) { // Función para mover el carrusel
+        currentIndex = (currentIndex + direction + totalSlides) % totalSlides; // Calcula el índice del carrusel
+        slide.style.transform = 'translateX(' + (-currentIndex * 100) + '%)'; // Mueve el carrusel
+      }
+    </script>
 
     <!-- Footer -->
     <footer class="text-white text-center py-4 blur">
