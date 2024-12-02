@@ -1,151 +1,170 @@
+<!-- Impresión 3D -->
+
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <title>3D Print</title>
-  <style>
-    html, body {
-      height: 100%;
-      margin: 0;
-    }
-    body {
-      display: flex;
-      flex-direction: column;
-      background-image: url('../rscs/img/fondo.jpg');
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-    }
-    .content {
-      flex: 1;
-    }
-    .blur {
-      backdrop-filter: blur(10px);
-      background-color: rgba(140, 193, 234, 0.1); /* Ajusta el color de fondo y la opacidad */
-    }
-    .blur-abstract{
-      backdrop-filter: blur(15px);
-      background-color: rgba(0, 0, 0, 0.5);
-    }
-    .blur-works {
-      backdrop-filter: blur(15px);
-      background-color: rgba(255, 255, 255, 0.1); /* Ajusta el color de fondo y la opacidad */
-    }
-  </style>
-</head>
 
-<body>
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="../index.html">
-      <img src="../rscs/img/diploma.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-middle">
-      Angel's Hub
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page">C:/user/Home/Works/3D-Print</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
+  <head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
-<div>‎ </div>
+    <title>3D Print</title>
 
-<!-- Header -->
-<header class="text-white text-center py-2 blur">
-  <div class="container">
-    <h1>3D Print</h1>
-    <p class="lead">No solamente podemos llevar objetos de lo físico a lo virtual, sino también de lo virtual a lo físico.</p>
-  </div>
-</header>
+    <style>
 
-<main class="container my-5 content">
+      html, body {
+        height: 100%;
+        margin: 0;
+      }
 
-  <div class="row">
-    <div class="col-md-6">
-      <div class="card text-white blur-abstract">
-        <div class="card-body">
-          <h2 class="card-title text-center">{3D Print}</h2>
-          <ul class="list-group blur">
-            <li class="list-group-item blur text-white text-center">
-              <h5>La impresión 3D es un proceso que crea objetos físicos a partir de modelos digitales, depositando capas de material como plástico o metal de forma precisa. Es utilizada en diversas industrias para prototipos, fabricación de piezas personalizadas y productos complejos, ahorrando tiempo y costos.</h5>
+      body {
+        display: flex;
+        flex-direction: column;
+        background-image: url('../rscs/img/fondo.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+      }
+
+      .content {
+        flex: 1;
+      }
+
+      .blur {
+        backdrop-filter: blur(10px);
+        background-color: rgba(140, 193, 234, 0.1); /* Ajusta el color de fondo y la opacidad */
+      }
+
+      .blur-abstract{
+        backdrop-filter: blur(15px);
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+
+      .blur-works {
+        backdrop-filter: blur(15px);
+        background-color: rgba(255, 255, 255, 0.1); /* Ajusta el color de fondo y la opacidad */
+      }
+
+    </style>
+  </head>
+
+  <!-- Body -->
+  <body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html">
+          <img src="../rscs/img/diploma.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-middle">
+          Angel's Hub
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page">C:/user/Home/Works/3D-Print</a>
             </li>
           </ul>
-          <div class="d-flex flex-column">
-            <div class="d-flex align-items-center">
-              <img src="../rscs/img/3DPrint.png" class="me-3" style="width: 100%; height: auto;" alt="vr">
+        </div>
+      </div>
+    </nav>
+
+    <div> ‎ </div>
+
+    <!-- Header -->
+    <header class="text-white text-center py-2 blur">
+      <div class="container">
+        <h1>3D Print</h1>
+        <p class="lead">No solamente podemos llevar objetos de lo físico a lo virtual, sino también de lo virtual a lo físico.</p>
+      </div>
+    </header>
+
+    <!-- Main -->
+    <main class="container my-5 content">
+      <div class="row">
+
+        <div class="col-md-6">
+          <div class="card text-white blur-abstract">
+            <div class="card-body">
+              <h2 class="card-title text-center">{3D Print}</h2>
+              <ul class="list-group blur">
+                <li class="list-group-item blur text-white text-center">
+                  <h5>La impresión 3D es un proceso que crea objetos físicos a partir de modelos digitales, depositando capas de material como plástico o metal de forma precisa. Es utilizada en diversas industrias para prototipos, fabricación de piezas personalizadas y productos complejos, ahorrando tiempo y costos.</h5>
+                </li>
+              </ul>
+              <div class="d-flex flex-column">
+                <div class="d-flex align-items-center">
+                  <img src="../rscs/img/3DPrint.png" class="me-3" style="width: 100%; height: auto;" alt="vr">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="card mb-4 text-white blur-abstract">
+            <div class="card-body">
+              <h2 class="card-title text-center">{Techniques}</h2>
+              <ul class="list-group blur">
+                <li class="list-group-item blur text-white text-center">
+                  <h5>Hay distintas técnicas de impresión dependiendo del objeto y terminaciones que tengas en mente. Los 3 más comúnes son:</h5>
+                </li>
+                <li class="list-group-item blur text-white text-center">
+                  <h5>{Fused Deposition Modeling (FDM)}</h5> Utiliza un filamento de plástico que se derrite y se deposita en capas para formar el objeto. Es muy popular, simple y barato. Un ejemplo de esta impresora esta abajo.
+                </li>
+                <li class="list-group-item blur text-white text-center">
+                  <h5>{Stereolithography}</h5> Usa un láser para endurecer resina líquida capa por capa. Es muy preciso y se utiliza para objetos pequeños y detallados.
+                </li>
+                <li class="list-group-item blur text-white text-center">
+                  <h5>{Selective Laser Sintering}</h5> Emplea un láser para sintetizar polvo de metal o plástico, fusionando las partículas en un objeto sólido. Es muy preciso y se utiliza para objetos resistentes y complejos.
+                </li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="col-md-6">
-      <div class="card mb-4 text-white blur-abstract">
-        <div class="card-body">
-          <h2 class="card-title text-center">{Techniques}</h2>
-          <ul class="list-group blur">
-            <li class="list-group-item blur text-white text-center">
-              <h5>Hay distintas técnicas de impresión dependiendo del objeto y terminaciones que tengas en mente. Los 3 más comúnes son:</h5>
-            </li>
-            <li class="list-group-item blur text-white text-center">
-              <h5>{Fused Deposition Modeling (FDM)}</h5> Utiliza un filamento de plástico que se derrite y se deposita en capas para formar el objeto. Es muy popular, simple y barato. Un ejemplo de esta impresora esta abajo.
-            </li>
-            <li class="list-group-item blur text-white text-center">
-              <h5>{Stereolithography}</h5> Usa un láser para endurecer resina líquida capa por capa. Es muy preciso y se utiliza para objetos pequeños y detallados.
-            </li>
-            <li class="list-group-item blur text-white text-center">
-              <h5>{Selective Laser Sintering}</h5> Emplea un láser para sintetizar polvo de metal o plástico, fusionando las partículas en un objeto sólido. Es muy preciso y se utiliza para objetos resistentes y complejos.
-            </li>
-          </ul>
+      <div> ‎ </div>
+
+      <div class="row">
+
+        <div class="col-md-6">
+          <div class="card mb-4 text-white blur-works">
+            <div class="card-body">
+              <h2 class="card-title text-center">{Example 1}</h2>
+              <ul class="list-group blur">
+                <li class="list-group-item blur text-white text-center">
+                  <div class="sketchfab-embed-wrapper"> <iframe title="Tesla - Cybertruck" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/5a86defda4b24836a504fe5e597fdb17/embed" width="550" height="400" > </iframe> <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a href="https://sketchfab.com/3d-models/tesla-cybertruck-5a86defda4b24836a504fe5e597fdb17?utm_medium=embed&utm_campaign=share-popup&utm_content=5a86defda4b24836a504fe5e597fdb17" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> Tesla - Cybertruck </a> by <a href="https://sketchfab.com/bubelrobert?utm_medium=embed&utm_campaign=share-popup&utm_content=5a86defda4b24836a504fe5e597fdb17" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> bubelrobert </a> on <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=5a86defda4b24836a504fe5e597fdb17" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a></p></div>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </div>
 
-  <div>‎ </div> <!-- Espacio -->
-
-  <div class="row">
-    <div class="col-md-6">
-      <div class="card mb-4 text-white blur-abstract">
-        <div class="card-body">
-          <h2 class="card-title text-center">{Example 1}</h2>
-          <ul class="list-group blur">
-            <li class="list-group-item blur text-white text-center">
-              <div class="sketchfab-embed-wrapper"> <iframe title="Tesla - Cybertruck" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/5a86defda4b24836a504fe5e597fdb17/embed" width="550" height="400" > </iframe> <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a href="https://sketchfab.com/3d-models/tesla-cybertruck-5a86defda4b24836a504fe5e597fdb17?utm_medium=embed&utm_campaign=share-popup&utm_content=5a86defda4b24836a504fe5e597fdb17" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> Tesla - Cybertruck </a> by <a href="https://sketchfab.com/bubelrobert?utm_medium=embed&utm_campaign=share-popup&utm_content=5a86defda4b24836a504fe5e597fdb17" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> bubelrobert </a> on <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=5a86defda4b24836a504fe5e597fdb17" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a></p></div>
-            </li>
-          </ul>
+        <div class="col-md-6">
+          <div class="card mb-4 text-white blur-works">
+            <div class="card-body">
+              <h2 class="card-title text-center">{Example 2}</h2>
+              <ul class="list-group blur">
+                <li class="list-group-item blur text-white text-center">
+                  <div class="sketchfab-embed-wrapper"> <iframe title="3d printer" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share width="550" height="400" src="https://sketchfab.com/models/9c393754e3fc4be0bda0fc5f4c6b883e/embed"> </iframe> <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a href="https://sketchfab.com/3d-models/3d-printer-9c393754e3fc4be0bda0fc5f4c6b883e?utm_medium=embed&utm_campaign=share-popup&utm_content=9c393754e3fc4be0bda0fc5f4c6b883e" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> 3d printer </a> by <a href="https://sketchfab.com/pranavsketchup2010?utm_medium=embed&utm_campaign=share-popup&utm_content=9c393754e3fc4be0bda0fc5f4c6b883e" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> Pranav 3d </a> on <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=9c393754e3fc4be0bda0fc5f4c6b883e" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a></p></div>            </li>
+              </ul>
+            </div>
+          </div>
         </div>
+
       </div>
-    </div>
 
-    <div class="col-md-6">
-      <div class="card mb-4 text-white blur-abstract">
-        <div class="card-body">
-          <h2 class="card-title text-center">{Example 2}</h2>
-          <ul class="list-group blur">
-            <li class="list-group-item blur text-white text-center">
-              <div class="sketchfab-embed-wrapper"> <iframe title="3d printer" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share width="550" height="400" src="https://sketchfab.com/models/9c393754e3fc4be0bda0fc5f4c6b883e/embed"> </iframe> <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a href="https://sketchfab.com/3d-models/3d-printer-9c393754e3fc4be0bda0fc5f4c6b883e?utm_medium=embed&utm_campaign=share-popup&utm_content=9c393754e3fc4be0bda0fc5f4c6b883e" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> 3d printer </a> by <a href="https://sketchfab.com/pranavsketchup2010?utm_medium=embed&utm_campaign=share-popup&utm_content=9c393754e3fc4be0bda0fc5f4c6b883e" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> Pranav 3d </a> on <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=9c393754e3fc4be0bda0fc5f4c6b883e" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a></p></div>            </li>
-          </ul>
-        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-white text-center py-4 blur">
+      <div class="container">
+        <p class="mb-0">© 2024 Angel's Hub.</p>
       </div>
-    </div>
-  </div>
+    </footer>
 
-</main>
+  </body>
 
-<!-- Footer -->
-<footer class="text-white text-center py-4 blur">
-  <div class="container">
-    <p class="mb-0">© 2024 Angel's Hub.</p>
-  </div>
-</footer>
-</body>
+</html>

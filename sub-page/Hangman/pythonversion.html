@@ -1,138 +1,281 @@
+<!-- Sub-página de Hangman, con una versión en python -->
+
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <title>Hangman</title>
-  <style>
-    html, body {
-      height: 100%;
-      margin: 0;
-    }
-    body {
-      display: flex;
-      flex-direction: column;
-      background-image: url('../../rscs/img/fondo.jpg');
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-    }
-    .content {
-      flex: 1;
-    }
-    .blur {
-      backdrop-filter: blur(10px);
-      background-color: rgba(140, 193, 234, 0.1); /* Ajusta el color de fondo y la opacidad */
-    }
-    .blur-abstract{
-      backdrop-filter: blur(15px);
-      background-color: rgba(0, 0, 0, 0.5);
-    }
-    .blur-works {
-      backdrop-filter: blur(15px);
-      background-color: rgba(255, 255, 255, 0.1); /* Ajusta el color de fondo y la opacidad */
-    }
-  </style>
-</head>
 
-<body>
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="../../index.html">
-      <img src="../../rscs/img/diploma.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-middle">
-      Angel's Hub
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page">C:/user/Home/Works/Hangman/python-version</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
+  <!-- Info. -->
+  <head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
-<div>‎ </div>
+    <title>Hangman</title>
 
-<!-- Header -->
-<header class="text-white text-center py-2 blur">
-  <div class="container">
-    <h1>Hangman</h1>
-    <p class="lead">Pero ahora es la versión creada en python. Revisemos las diferencias que hay entre los lenguajes de programación.</p>
-  </div>
-</header>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/brython@3.9.5/brython.min.js"></script>
 
-<main class="container my-5 content">
-  <div class="row">
-    <div class="col-md-6">
-      <div class="card text-white blur-abstract">
-        <div class="card-body">
-          <h2 class="card-title text-center">{Concept}</h2>
-          <ul class="list-group blur">
-            <li class="list-group-item blur text-white text-center">
-              <h5>Python es un lenguaje de programación de alto nivel, el cual hace especial énfasis en ser fácil de leer y escribir. Desde 1991, ha sido uno de los lenguajes más populares para la creación de códigos tanto para principiantes como para expertos que aprovechan sus facilidades.</h5>
-            </li>
-            <li class="list-group-item blur text-white text-center">
-              <img src="../../rscs/img/python.jpg" class="img-fluid" alt="Python">
+    <style>
+
+      html, body {
+        height: 100%;
+        margin: 0;
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+        background-image: url('../../rscs/img/fondo.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+      }
+
+      .content {
+        flex: 1;
+      }
+
+      .blur {
+        backdrop-filter: blur(10px);
+        background-color: rgba(140, 193, 234, 0.1); /* Ajusta el color de fondo y la opacidad */
+      }
+
+      .blur-abstract{
+        backdrop-filter: blur(15px);
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+
+      .blur-works {
+        backdrop-filter: blur(15px);
+        background-color: rgba(255, 255, 255, 0.1); /* Ajusta el color de fondo y la opacidad */
+      }
+
+    </style>
+  </head>
+
+  <!-- Body -->
+  <body onload="brython()">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../../index.html">
+          <img src="../../rscs/img/diploma.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-middle">
+          Angel's Hub
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page">C:/user/Home/Works/Hangman/python-version</a>
             </li>
           </ul>
         </div>
       </div>
-    </div>
+    </nav>
 
-      <div class="col-md-6">
-        <div class="card text-white blur-abstract">
-          <div class="card-body">
-            <h2 class="card-title text-center">{Differences}</h2>
-            <ul class="list-group blur">
-              <li class="list-group-item blur text-white text-center">
-                <h5>Hay una múltitud de diferencias entre un lenguaje como C++ y Python, comenzando desde la propia fecha de creación, siendo C++ un lenguaje más antiguo, pero enfoquemonos en algunos apartados específicos.</h5>
-              </li>
-              <li class="list-group-item blur text-white text-center">
-                <h5>{Sintaxis}</h5> Python cuenta con una sintaxis más sencilla y fácil de leer, mientras que C++ es más complejo y detallado. Esto ayuda al momento de escribir y leer, pero puede ser un problema al momento de depurar.
-              </li>
-              <li class="list-group-item blur text-white text-center">
-                <h5>{Compilation}</h5> Python es un lenguaje interpretado, lo que significa que no necesita ser compilado para ser ejecutado, mientras que C++ es un lenguaje compilado, lo que significa que necesita ser compilado antes de ser ejecutado.
-              </li>
+    <div> ‎ </div>
+
+    <!-- Header -->
+    <header class="text-white text-center py-2 blur">
+      <div class="container">
+        <h1>Hangman</h1>
+        <p class="lead">Pero ahora es la versión creada en python. Revisemos las diferencias que hay entre los lenguajes de programación.</p>
+      </div>
+    </header>
+
+    <!-- Main -->
+    <main class="container my-5 content">
+      <div class="row">
+
+        <div class="col-md-6">
+          <div class="card text-white blur-abstract">
+            <div class="card-body">
+              <h2 class="card-title text-center">{Concept}</h2>
+              <ul class="list-group blur">
                 <li class="list-group-item blur text-white text-center">
-                  <h5>{Performance}</h5> C++ es un lenguaje más rápido que Python, ya que es un lenguaje compilado y Python es un lenguaje interpretado, además de que tiene algunas instrucciones que pueden llegar a ser muy abstractas. Esto significa que C++ es más rápido en la ejecución de programas.
-              </li>
-            </ul>
+                  <h5>Python es un lenguaje de programación de alto nivel, el cual hace especial énfasis en ser fácil de leer y escribir. Desde 1991, ha sido uno de los lenguajes más populares para la creación de códigos tanto para principiantes como para expertos que aprovechan sus facilidades.</h5>
+                </li>
+                <li class="list-group-item blur text-white text-center">
+                  <img src="../../rscs/img/python.jpg" class="img-fluid" alt="Python">
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
-  </div>
 
-  <div>‎ </div>
-
-  <div class="row">
-    <div class="col-md-12">
-      <div class="card text-white blur-abstract">
-        <div class="card-body">
-          <h2 class="card-title text-center">{Code}</h2>
-          <ul class="list-group blur">
-            <li class="list-group-item blur text-white text-center">
-              <p class="mb-0">Cada error agregará una parte al dibujo del ahorcado. ¡Debes adivinar la palabra antes de completar el dibujo!</p>
-            </li>
-          </ul>
+        <div class="col-md-6">
+          <div class="card text-white blur-abstract">
+            <div class="card-body">
+              <h2 class="card-title text-center">{Differences}</h2>
+              <ul class="list-group blur">
+                <li class="list-group-item blur text-white text-center">
+                  <h5>Hay una múltitud de diferencias entre un lenguaje como C++ y Python, comenzando desde la propia fecha de creación, siendo C++ un lenguaje más antiguo, pero enfoquemonos en algunos apartados específicos.</h5>
+                </li>
+                <li class="list-group-item blur text-white text-center">
+                  <h5>{Sintaxis}</h5> Python cuenta con una sintaxis más sencilla y fácil de leer, mientras que C++ es más complejo y detallado. Esto ayuda al momento de escribir y leer, pero puede ser un problema al momento de depurar.
+                </li>
+                <li class="list-group-item blur text-white text-center">
+                  <h5>{Compilation}</h5> Python es un lenguaje interpretado, lo que significa que no necesita ser compilado para ser ejecutado, mientras que C++ es un lenguaje compilado, lo que significa que necesita ser compilado antes de ser ejecutado.
+                </li>
+                <li class="list-group-item blur text-white text-center">
+                  <h5>{Performance}</h5> C++ es un lenguaje más rápido que Python, ya que es un lenguaje compilado y Python es un lenguaje interpretado, además de que tiene algunas instrucciones que pueden llegar a ser muy abstractas. Esto significa que C++ es más rápido en la ejecución de programas.
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
+
       </div>
-    </div>
-  </div>
-</main>
 
-<!-- Footer -->
-<footer class="text-white text-center py-4 blur">
-  <div class="container">
-    <p class="mb-0">© 2024 Angel's Hub.</p>
-  </div>
-</footer>
+      <div> ‎ </div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+cvPLMw5bTkQ1M8fRW8xR73bcJ2lw" crossorigin="anonymous"></script>
-</body>
+      <div class="row">
+
+        <div class="col-md-12">
+          <div class="card text-white blur-abstract">
+            <div class="card-body">
+              <h2 class="card-title text-center">{Code}</h2>
+              <ul class="list-group blur">
+                <li class="list-group-item blur text-white text-center">
+                  <p class="mb-0">Cada error agregará una parte al dibujo del ahorcado. ¡Debes adivinar la palabra antes de completar el dibujo!</p>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <pre id="output"></pre>
+      <script type="text/python">
+        import random
+        import unicodedata
+
+        easy = ["taco", "sol", "gato", "flor"]
+        medium = ["mercado", "cactus", "tijeras", "pelota"]
+        hard = ["quetzal", "mezcal", "esfinge", "crisalida"]
+
+        def mostrar_palabra(palabra_mostrada):
+            print(" ".join(palabra_mostrada))
+
+        def mostrar_muneco(intentos):
+            print("  x---x")
+            print("  |   |")
+            if intentos <= 5:
+                print("  O   |")
+            else:
+                print("      |")
+            if intentos <= 4:
+                print("  |   |")
+            elif intentos <= 3:
+                print(" /|   |")
+            elif intentos <= 2:
+                print(" /|\\  |")
+            else:
+                print("      |")
+            if intentos <= 1:
+                print(" /    |")
+            elif intentos == 0:
+                print(" / \\  |")
+            else:
+                print("      |")
+            print("x_____|__x\n")
+
+        def normalizar_letra(texto):
+            return ''.join(
+                c.lower() for c in unicodedata.normalize('NFD', texto)
+                if unicodedata.category(c) != 'Mn'
+            )
+
+        def jugar(palabras):
+            palabra = normalizar_letra(random.choice(palabras))
+            Lpalabra = len(palabra)
+            palabra_mostrada = ["_"] * Lpalabra
+            intentos = 6
+            aciertos = 0
+
+            print("Adivina la palabra:")
+            mostrar_palabra(palabra_mostrada)
+
+            while intentos > 0 and aciertos < Lpalabra:
+                letra = input(f"Intentos restantes: {intentos}. Ingresa una letra: ").strip()
+                letra = normalizar_letra(letra)
+
+                if len(letra) != 1:
+                    print("Por favor, ingresa solo una letra.")
+                    continue
+
+                acierto = False
+                for i in range(Lpalabra):
+                    if palabra[i] == letra and palabra_mostrada[i] == "_":
+                        palabra_mostrada[i] = letra
+                        aciertos += 1
+                        acierto = True
+
+                if acierto:
+                    print("¡Correcto!")
+                else:
+                    print("¡Incorrecto!")
+                    intentos -= 1
+                    mostrar_muneco(intentos)
+
+                mostrar_palabra(palabra_mostrada)
+
+            if aciertos == Lpalabra:
+                print("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^")
+                print("¡Felicidades! :D Has adivinado la palabra.")
+                print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+            else:
+                print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+                print(f"Game Over D:. La palabra era: {palabra}")
+                print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+
+        def main():
+            print("¡BIENVENID@ AL JUEGO DEL AHORCADO!")
+            print("----------------------------------------")
+            print("Selecciona la dificultad del juego:")
+            print("1. Fácil")
+            print("2. Medio")
+            print("3. Difícil")
+            print("4. Salir")
+
+            try:
+                n = int(input("Opción: "))
+            except ValueError:
+                print("Opción no válida.")
+                return
+
+            print("----------------------------------------")
+            if n == 1:
+                print("¡Dificultad Fácil!")
+                jugar(easy)
+            elif n == 2:
+                print("¡Dificultad Media!")
+                jugar(medium)
+            elif n == 3:
+                print("¡Dificultad Difícil!")
+                jugar(hard)
+            elif n == 4:
+                print("¡Hasta luego!")
+            else:
+                print("Opción no válida.")
+
+        if __name__ == "__main__":
+            main()
+      </script>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-white text-center py-4 blur">
+      <div class="container">
+        <p class="mb-0">© 2024 Angel's Hub.</p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+cvPLMw5bTkQ1M8fRW8xR73bcJ2lw" crossorigin="anonymous"></script>
+
+  </body>
+
 </html>

@@ -108,8 +108,10 @@ void jugar(string palabras[], int tamano) {
     while (intentos > 0 && aciertos < Lpalabra) {
         win = false;
         cout << "Intentos Restantes: " << intentos << "." << endl;
-        cout << "Ingresa una letra: ";
+        cout << "Ingresa una letra: " << endl;
         cin >> letra;
+        cout << "----------------------------------------" << endl;
+
         letra = normalizarLetra(string(1, letra))[0]; // Normaliza la letra ingresada
 
         for (int i = 0; i < Lpalabra; i++) {
@@ -132,9 +134,13 @@ void jugar(string palabras[], int tamano) {
     }
 
     if (aciertos == Lpalabra) {
-        cout << "¡Felicidades! Has adivinado la palabra." << endl;
+        cout << "^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^" << endl;
+        cout << "¡Felicidades! :D Has adivinado la palabra." << endl;
+        cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" << endl;
     } else {
-        cout << "Game Over. La palabra era: " << palabra << endl;
+        cout << "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" << endl;
+        cout << "Game Over D:. La palabra era: " << palabra << endl;
+        cout << "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" << endl;
     }
 }
 
@@ -164,6 +170,7 @@ int main() {
     cout << "3. Difícil" << endl;
     cout << "4. Salir" << endl;
     cin >> n;
+    cout << "----------------------------------------" << endl;
 
     switch (n) {
         case 1:

@@ -1,138 +1,156 @@
+<!-- Realidad Virtual/Aumentada -->
+
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <title>VR-AR</title>
-  <style>
-    html, body {
-      height: 100%;
-      margin: 0;
-    }
-    body {
-      display: flex;
-      flex-direction: column;
-      background-image: url('../rscs/img/fondo.jpg');
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-    }
-    .content {
-      flex: 1;
-    }
-    .blur {
-      backdrop-filter: blur(10px);
-      background-color: rgba(140, 193, 234, 0.1); /* Ajusta el color de fondo y la opacidad */
-    }
-    .blur-abstract{
-      backdrop-filter: blur(15px);
-      background-color: rgba(0, 0, 0, 0.5);
-    }
-    .blur-works {
-      backdrop-filter: blur(15px);
-      background-color: rgba(255, 255, 255, 0.1); /* Ajusta el color de fondo y la opacidad */
-    }
-  </style>
-</head>
 
-<body>
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="../index.html">
-      <img src="../rscs/img/diploma.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-middle">
-      Angel's Hub
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page">C:/user/Home/Works/VR-AR</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
+  <!-- Info. -->
+  <head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
-<div>‎ </div>
+    <title>VR-AR</title>
 
-<!-- Header -->
-<header class="text-white text-center py-2 blur">
-  <div class="container">
-    <h1>VR-AR</h1>
-    <p class="lead">La tecnología nos ha permitido ir más allá de lo real. Ha llegado la hora de sumergirse en la realidad virtual.</p>
-  </div>
-</header>
+    <style>
 
-<main class="container my-5 content">
-  <div class="row">
+      html, body {
+        height: 100%;
+        margin: 0;
+      }
 
-    <div class="col-md-6">
-      <div class="card text-white blur-abstract">
-        <div class="card-body">
-          <h2 class="card-title text-center">{Virtual Reality (VR)}</h2>
-          <ul class="list-group blur">
-            <li class="list-group-item blur text-white text-center"><h5>Se trata de una inmersión digital que nos permite interactuar virtualmente con un entorno específico creado mediante gráficos de computadora. A menudo, el usuario utiliza gafas VR y controladores manuales.</h5></li>
+      body {
+        display: flex;
+        flex-direction: column;
+        background-image: url('../rscs/img/fondo.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+      }
+
+      .content {
+        flex: 1;
+      }
+
+      .blur {
+        backdrop-filter: blur(10px);
+        background-color: rgba(140, 193, 234, 0.1); /* Ajusta el color de fondo y la opacidad */
+      }
+
+      .blur-abstract{
+        backdrop-filter: blur(15px);
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+
+      .blur-works {
+        backdrop-filter: blur(15px);
+        background-color: rgba(255, 255, 255, 0.1); /* Ajusta el color de fondo y la opacidad */
+      }
+
+    </style>
+  </head>
+
+  <!-- Body -->
+  <body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html">
+          <img src="../rscs/img/diploma.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-middle">
+          Angel's Hub
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page">C:/user/Home/Works/VR-AR</a>
+            </li>
           </ul>
-          <div class="d-flex flex-column">
-            <div class="d-flex align-items-center">
-              <img src="../rscs/img/VR.jpg" class="me-3" style="width: 50%; height: auto;" alt="vr">
-                <p class="mb-0">Es especialmente útil para simulaciones de entrenamiento peligrosas o costosas; prototipos virtuales con el fin de reducir costos; colaborar de forma remota; inclusive tener entretenimiento más inmersivo sin moverse de casa.</p>
+        </div>
+      </div>
+    </nav>
+
+    <div> ‎ </div>
+
+    <!-- Header -->
+    <header class="text-white text-center py-2 blur">
+      <div class="container">
+        <h1>VR-AR</h1>
+        <p class="lead">La tecnología nos ha permitido ir más allá de lo real. Ha llegado la hora de sumergirse en la realidad virtual.</p>
+      </div>
+    </header>
+
+    <!-- Main -->
+    <main class="container my-5 content">
+      <div class="row">
+
+        <div class="col-md-6">
+          <div class="card text-white blur-abstract">
+            <div class="card-body">
+              <h2 class="card-title text-center">{Virtual Reality (VR)}</h2>
+              <ul class="list-group blur">
+                <li class="list-group-item blur text-white text-center"><h5>Se trata de una inmersión digital que nos permite interactuar virtualmente con un entorno específico creado mediante gráficos de computadora. A menudo, el usuario utiliza gafas VR y controladores manuales.</h5></li>
+              </ul>
+              <div class="d-flex flex-column">
+                <div class="d-flex align-items-center">
+                  <img src="../rscs/img/VR.jpg" class="me-3" style="width: 50%; height: auto;" alt="vr">
+                    <p class="mb-0">Es especialmente útil para simulaciones de entrenamiento peligrosas o costosas; prototipos virtuales con el fin de reducir costos; colaborar de forma remota; inclusive tener entretenimiento más inmersivo sin moverse de casa.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="card text-white blur-abstract">
+            <div class="card-body">
+              <h2 class="card-title text-center">{Augmented Reality (AR)}</h2>
+              <ul class="list-group blur">
+                <li class="list-group-item blur text-white text-center"><h5>Es una integración de información digital con el entorno físico en tiempo real. A través de smartphones, tablets, o gafas, el usuario puede observar objetos virtuales sobrepuestos en la realidad.</h5></li>
+              </ul>
+              <div class="d-flex flex-column">
+                <div class="d-flex align-items-center">
+                  <img src="../rscs/img/AR.png" class="me-3" style="width: 50%; height: auto;" alt="ar">
+                  <p class="mb-0">Nos sirve para reparación y mantenimiento de diferentes equipos; diseñar productos sobreponiéndolos en entornos reales; optimizar productos; y monitorear infraestructuras con datos informáticos en tiempo real.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div> ‎ </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card text-white blur-works">
+            <div class="card-body">
+                <h2 class="card-title text-center">{Evidences}</h2>
+                <ul class="list-group blur">
+                  <li class="list-group-item blur text-white text-center">
+                    <h4>En mi caso, con fin de la clase de I.I.S.C. e interes propio, me vi inmerso en una experiencia de VR disponible desde el laboratorio de la escuela.</h4>
+                    <video style="width: 100%; height: auto;" controls>
+                      <source src="../rscs/videos/mi_video.mp4" type="video/mp4">
+                      Tu navegador no soporta la etiqueta de video.
+                    </video>
+                  </li>
+                </ul>
             </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="col-md-6">
-      <div class="card text-white blur-abstract">
-        <div class="card-body">
-          <h2 class="card-title text-center">{Augmented Reality (AR)}</h2>
-          <ul class="list-group blur">
-            <li class="list-group-item blur text-white text-center"><h5>Es una integración de información digital con el entorno físico en tiempo real. A través de smartphones, tablets, o gafas, el usuario puede observar objetos virtuales sobrepuestos en la realidad.</h5></li>
-          </ul>
-          <div class="d-flex flex-column">
-            <div class="d-flex align-items-center">
-              <img src="../rscs/img/AR.png" class="me-3" style="width: 50%; height: auto;" alt="ar">
-              <p class="mb-0">Nos sirve para reparación y mantenimiento de diferentes equipos; diseñar productos sobreponiéndolos en entornos reales; optimizar productos; y monitorear infraestructuras con datos informáticos en tiempo real.</p>
-            </div>
-          </div>
-        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-white text-center py-4 blur">
+      <div class="container">
+        <p class="mb-0">© 2024 Angel's Hub.</p>
       </div>
-    </div>
+    </footer>
 
-  </div>
+  </body>
 
-  <div>‎ </div>
-
-  <div class="row">
-    <div class="col-md-12">
-      <div class="card text-white blur-abstract">
-        <div class="card-body">
-            <h2 class="card-title text-center">{Evidences}</h2>
-            <ul class="list-group blur">
-              <li class="list-group-item blur text-white text-center">
-                <h4>En mi caso, con fin de la clase de I.I.S.C. e interes propio, me vi inmerso en una experiencia de VR disponible desde el laboratorio de la escuela.</h4>
-                <video style="width: 100%; height: auto;" controls>
-                  <source src="../rscs/videos/mi_video.mp4" type="video/mp4">
-                  Tu navegador no soporta la etiqueta de video.
-                </video>
-              </li>
-            </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-
-</main>
-
-<!-- Footer -->
-<footer class="text-white text-center py-4 blur">
-  <div class="container">
-    <p class="mb-0">© 2024 Angel's Hub.</p>
-  </div>
-</footer>
-</body>
+</html>

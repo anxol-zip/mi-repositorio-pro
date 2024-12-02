@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="cb92469e-9aec-47d9-9251-aa67b468e60b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../../../../index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../3D-Print.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../3D-Print.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../3D-Scan.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../3D-Scan.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../GitHub/github.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../GitHub/github.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../GitHub/magic.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../GitHub/magic.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Ahorcado/.idea/Ahorcado.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Ahorcado/.idea/Ahorcado.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Ahorcado/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Ahorcado/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Ahorcado/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Ahorcado/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Ahorcado/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Ahorcado/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Ahorcado/cmake-build-debug/.cmake/api/v1/reply/cache-v2-74849f699ccbb813c663.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Ahorcado/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-362db88565f45432b411.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Ahorcado/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-365ff8308f059a12fe5b.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Ahorcado/cmake-build-debug/.cmake/api/v1/reply/index-2024-10-29T00-57-13-0904.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Ahorcado/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/../../Ahorcado/cmake-build-debug/.ninja_deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Ahorcado/cmake-build-debug/.ninja_deps.recompact" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Ahorcado/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/../../Ahorcado/cmake-build-debug/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Ahorcado/cmake-build-debug/Ahorcado.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../Ahorcado/cmake-build-debug/Ahorcado.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Ahorcado/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../Ahorcado/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Ahorcado/cmake-build-debug/CMakeFiles/3.29.6/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../Ahorcado/cmake-build-debug/CMakeFiles/3.29.6/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Ahorcado/cmake-build-debug/CMakeFiles/3.29.6/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../Ahorcado/cmake-build-debug/CMakeFiles/3.29.6/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Ahorcado/cmake-build-debug/CMakeFiles/3.29.6/CompilerIdC/a.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../Ahorcado/cmake-build-debug/CMakeFiles/3.29.6/CompilerIdC/a.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Ahorcado/cmake-build-debug/CMakeFiles/3.29.6/CompilerIdCXX/a.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../Ahorcado/cmake-build-debug/CMakeFiles/3.29.6/CompilerIdCXX/a.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Ahorcado/cmake-build-debug/CMakeFiles/Ahorcado.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../../Ahorcado/cmake-build-debug/CMakeFiles/Ahorcado.dir/main.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Ahorcado/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Ahorcado/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Ahorcado/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../Ahorcado/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Ahorcado/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../Ahorcado/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Ahorcado/cmake-build-debug/CMakeFiles/rules.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/../../Ahorcado/cmake-build-debug/CMakeFiles/rules.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Ahorcado/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../Ahorcado/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Ahorcado/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/../../Ahorcado/cmake-build-debug/build.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Ahorcado/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../Ahorcado/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Ahorcado/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../Ahorcado/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../hangman.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../hangman.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../pythonversion.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../pythonversion.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../troll.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../troll.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../IA.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../IA.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Web 1/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Web 1/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Web 1/secundarias/gustos.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Web 1/secundarias/gustos.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Web 1/secundarias/habilidades.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Web 1/secundarias/habilidades.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Web 1/secundarias/yo.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Web 1/secundarias/yo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../back-end.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../back-end.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../canva.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../stack_overflow.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../flutterflow.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../flutterflow.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../frameworks.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../frameworks.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../modeva.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../modeva.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../var.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../var.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../../.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 1
+}]]></component>
+  <component name="ProjectId" id="2peEQ7Sb0U3HKONPKA6j4wwGt8s" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.hangman.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/angel/Projects.707/IISC/mi-repositorio-pro/sub-page/Hangman/Minigame/Hangman_Python",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-PY-242.23339.19" />
+        <option value="bundled-python-sdk-0029f7779945-399fe30bd8c1-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-242.23339.19" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cb92469e-9aec-47d9-9251-aa67b468e60b" name="Changes" comment="" />
+      <created>1733118121473</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1733118121473</updated>
+      <workItem from="1733118122844" duration="303000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Hangman_Python$hangman.coverage" NAME="hangman Coverage Results" MODIFIED="1733118159926" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>
